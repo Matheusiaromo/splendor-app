@@ -1,5 +1,7 @@
 # My App
 
+Durante o desenvolvimento tive problema com CORS com a API, e por isso não completei a etapa de login utilizando os states e o redirect por router do framework7. Invés disso, para mostrar todas as telas só fiz um redirect básico usando href nos botões. 
+
 ## Framework7 CLI Options
 
 Framework7 app created with following options:
