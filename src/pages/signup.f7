@@ -1,0 +1,60 @@
+<template>
+    <div class="page" data-name="signup">
+      <div class="page-content pg-login">
+          <div class="block">
+
+            <div class="div-form">
+              <h2>Create a new account!</h2>
+
+              <form action="#">
+                <input type="text" value="${username}" @input="${updateUsername}" placeholder="Your username or email" id="email" />
+                <input type="password" value="${password}" @input="${updatePassword}" placeholder="Your password" id="password" />
+                <input type="password" value="${confirmPassword}" @input="${updateConfirmPassword}" placeholder="Confirm password" id="confirmpassword" />
+
+                <a class="btn-login" @click="${signup}" href="#">Signup</a>
+
+                <img class="aspiral-absolute" src="/static/aspiral-login.png" alt="" />
+              </form>
+            </div>
+
+          <p>Do you have an account? <a href="/login/"><u>Login here</u></a></p>
+          </div>
+      </div>
+    </div>
+
+</template>
+<script>
+
+export default (props, {$f7, $f7router, $update }) => {
+
+  let username = '';
+let password = '';
+let confirmPassword = '';
+
+const updateUsername = (e) => {
+  username = e.target.value;
+  $update();
+};
+const updatePassword = (e) => {
+  password = e.target.value;
+  $update();
+};
+const updateConfirmPassword = (e) => {
+  confirmPassword = e.target.value;
+  $update();
+};
+
+const signup = () => {
+  if (username === '' || password === '' || confirmPassword === '') {
+    $f7.dialog.alert('All fields are required', 'Error');
+  } else if (password !== confirmPassword) {
+    $f7.dialog.alert('Password and Confirm Password must match', 'Error');
+  } else {
+    $f7router.navigate('/welcome/', { clearPreviousHistory: true });
+  }
+};
+
+
+return $render;
+}
+</script>

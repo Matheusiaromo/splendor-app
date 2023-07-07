@@ -10,14 +10,14 @@
                 <input type="text" value="${username}" @input="${updateUsername}" placeholder="Your username or email" name="email" id="email" />
                 <input type="password" value="${password}" @input="${updatePassword}" placeholder="Your password" name="password" id="password" />
 
-                <!-- <a class="btn-login" @click="${login}" href="#">Login</a> -->
-                <a class="btn-login" href="/welcome/">Login</a>
+                <a class="btn-login" @click="${login}" href="#">Login</a>
+                <!-- <a class="btn-login" href="/welcome/">Login</a> -->
 
                 <img class="aspiral-absolute" src="/static/aspiral-login.png" alt="" />
               </form>
             </div>
 
-          <p>Don't have an account? <u>Signup here</u></p>
+          <p>Don't have an account? <a href="/signup/"><u>Signup here</u></a></p>
           </div>
       </div>
     </div>
@@ -25,14 +25,13 @@
 </template>
 <script>
 
-import store from '../js/store.js';
+export default (props, { $f7, $store, $update, $f7router }) => {
 
-export default (props, { $update }) => {
+ /*  let username = 'awesometeam';
+  let password = 'wearesplendor#123'; */
 
-  const userStore = store;
-
-  let username = 'awesometeam';
-  let password = 'wearesplendor#123';
+  let username = '';
+  let password = '';
 
   const updateUsername = (e) => {
     username = e.target.value;
@@ -44,7 +43,16 @@ export default (props, { $update }) => {
   }
 
   const login = () => {
-    const url = 'https://splendor.dev/wp-json/wp/v2/dev/user/auth';
+
+    if (username === '' || password === '') {
+      $f7.dialog.alert('Username and password are required', 'Error');
+    } else if (username !== 'awesometeam' || password !== 'wearesplendor#123') {
+      $f7.dialog.alert('Username or password are incorrect', 'Error');
+    } else {
+      $f7router.navigate('/welcome/', { clearPreviousHistory: true });
+    }
+    
+    /* const url = 'https://splendor.dev/wp-json/wp/v2/dev/user/auth';
     const authHeader = 'Basic ' + btoa(username + ':' + password);
 
     fetch(url, {
@@ -55,11 +63,11 @@ export default (props, { $update }) => {
       },
       body: JSON.stringify()
     }).then(data => {
-      userStore.dispatch('setUser', data.user_data)
+      $store.dispatch('setUser', data.user_data)
     })
     .catch(error => {
       console.error(error);
-    });
+    }); */
   }
 
 return $render;
