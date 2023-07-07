@@ -1,0 +1,31 @@
+<template>
+  <div class="page" data-name="home">
+  
+    <!-- Scrollable page content-->
+    <div class="page-content pg-home">
+      <div class="block">
+        <h1>Take Care Of</h1>
+        <h1>Your Health!</h1>
+        <p>With O Medic</p>
+
+        <img class="img-home" src="/static/img-home.png" alt="" />
+
+        <p style="text-align: center;">Manage your health ease with us</p>
+
+        <div class="div-btn">
+          <a href="/login" class="btn-s-primary">
+            Get Started
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</template>
+<script>
+export default () => {
+  return $render;
+}
+</script>

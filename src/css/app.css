@@ -1,0 +1,367 @@
+/* Your app custom styles here */
+
+h1, h2, h3, h4, h5, p, span {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    color: #094067;
+    font-family: Raleway;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 56px;
+}
+
+p {
+    color: #094067;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0.8px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn-s-primary {
+    border-radius: 100px;
+    background: linear-gradient(112deg, #82C3FF 0%, #3DA9FC 96.25%);    
+    color: #F3F3F3;
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+    padding: 8px 120px;
+    border: none;
+}
+
+/* HOME */
+
+.pg-home img {
+    width: 100%;
+}
+
+.pg-home .btn-s-primary {
+   margin-top: 60px;
+}
+
+.pg-home .img-home {
+    margin-top: -50px;
+}
+
+.pg-home .div-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pg-home .block {
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    background: url("/static/bg-aspiral-home.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+/* LOGIN */
+
+.pg-login .block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 60px;
+}
+
+.pg-login .div-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.pg-login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 26px;
+}
+
+input[type='text'], input[type='password'] {
+    border: 1px solid rgba(61, 61, 61, 0.20);
+    padding: 15px 20px;
+    border-radius: 0px;
+    width: 300px;
+    z-index: 2;
+}
+
+.pg-login .btn-login {
+    color: #FFF;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    border-radius: 100px;
+    background: linear-gradient(116deg, #82C3FF 0%, #3DA9FC 96.25%);
+    padding: 18px 30px;
+    margin: 0 auto;
+    z-index: 2;
+
+    margin-top: 5px;
+}
+
+.pg-login h2 {
+    color: #094067;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    z-index: 2;
+}
+
+.pg-login p {
+    color: #094067;
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    z-index: 2;
+}
+
+.pg-login .aspiral-absolute {
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    z-index: 0;
+}
+
+/* WELCOME */
+
+.pg-welcome {
+    padding-bottom: 80px;
+}
+
+.pg-welcome .block {
+    background: #FFFFFE;
+}
+
+.pg-welcome .w-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pg-welcome .w-services > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.pg-welcome .w-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 11px 0px 11px;
+    align-items: center;
+    border-radius: 12px;
+    flex: 1;
+}
+
+.pg-welcome .w-card:nth-child(1) {
+    background-color: #F1F9FF;
+}
+
+.pg-welcome .w-card:nth-child(2) {
+    background-color: #FFF5F5;
+}
+
+.pg-welcome .w-card:nth-child(3) {
+    background-color: #F6FFF8;
+}
+
+.pg-welcome .w-card:nth-child(4) {
+    background-color: #FFFDF1;
+}
+
+.pg-welcome .w-card p {
+    color: #094067;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.pg-welcome .w-services h2 {
+    color: #094067;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.pg-welcome .w-img img{
+    width: 100%;
+    margin-top: -40px;
+}
+
+.pg-welcome .w-img {
+    margin-bottom: 32px;
+}
+
+.pg-welcome .w-appointments {
+    margin-top: 12px;
+}
+
+.pg-welcome .w-appointments h2 {
+    color: #094067;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+
+    margin-bottom: 24px;
+}
+
+.pg-welcome .w-a-card {
+    box-shadow: 9px 19px 50px 0px rgba(170, 170, 170, 0.20);
+    border-radius: 12px;
+}
+
+.pg-welcome .w-a-header-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 12px;
+    margin-left: 12px;
+    padding: 12px 0px 12px 0px;
+    border-bottom: 1px solid #F3F3F2;
+}
+
+
+.pg-welcome .w-a-header-card > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.pg-welcome .w-a-header-card > div:nth-child(2) {
+    align-items: flex-end;
+}
+
+.pg-welcome .w-a-header-card p {
+    color: #094067;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+.pg-welcome .w-a-header-card span {
+    color: #EF4565;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 9px;
+}
+
+.pg-welcome .w-a-body-card {
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.pg-welcome .w-a-body-card > div {
+    position: relative;
+}
+
+.pg-welcome .w-a-status {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 7px;
+    height: 7px;
+    background: #64FF4A;
+    border-radius: 30px;
+    border: 1px solid #fff;
+}
+
+.w-toolbar {
+    background: transparent;
+    height: 80px;
+}
+
+.w-toolbar .toolbar-inner{
+    border-radius: 20px;
+    padding: 12px 38px;
+    box-shadow: 0px -4px 20px 0px rgba(35, 64, 142, 0.10);
+    height: 80px;
+    background: #fff;
+}
+
+.w-toolbar .link span {
+    display: none;
+    color: #28587A;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.w-toolbar .link {
+    display: flex;
+}
+
+.w-toolbar .active span {
+    display: block;
+}
+
+.w-toolbar .active {
+    border-radius: 1000px;
+    background: #F1F9FF;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+}
+
+.w-appointments > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}

@@ -1,0 +1,67 @@
+<template>
+    <div class="page" data-name="login">
+      <div class="page-content pg-login">
+          <div class="block">
+
+            <div class="div-form">
+              <h2>Wellcome to our app!</h2>
+
+              <form action="#">
+                <input type="text" value="${username}" @input="${updateUsername}" placeholder="Your username or email" name="email" id="email" />
+                <input type="password" value="${password}" @input="${updatePassword}" placeholder="Your password" name="password" id="password" />
+
+                <!-- <a class="btn-login" @click="${login}" href="#">Login</a> -->
+                <a class="btn-login" href="/welcome/">Login</a>
+
+                <img class="aspiral-absolute" src="/static/aspiral-login.png" alt="" />
+              </form>
+            </div>
+
+          <p>Don't have an account? <u>Signup here</u></p>
+          </div>
+      </div>
+    </div>
+
+</template>
+<script>
+
+import store from '../js/store.js';
+
+export default (props, { $update }) => {
+
+  const userStore = store;
+
+  let username = 'awesometeam';
+  let password = 'wearesplendor#123';
+
+  const updateUsername = (e) => {
+    username = e.target.value;
+    $update();
+  }
+  const updatePassword = (e) => {
+    password = e.target.value;
+    $update();
+  }
+
+  const login = () => {
+    const url = 'https://splendor.dev/wp-json/wp/v2/dev/user/auth';
+    const authHeader = 'Basic ' + btoa(username + ':' + password);
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': authHeader
+      },
+      body: JSON.stringify()
+    }).then(data => {
+      userStore.dispatch('setUser', data.user_data)
+    })
+    .catch(error => {
+      console.error(error);
+    });
+  }
+
+return $render;
+}
+</script>

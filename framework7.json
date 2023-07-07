@@ -1,0 +1,18 @@
+{
+  "cwd": "C:\\Users\\mathe\\Desktop\\AAA-SITES-GERAIS\\splendor-app-zero",
+  "type": [
+    "web"
+  ],
+  "name": "My App",
+  "framework": "core",
+  "template": "blank",
+  "bundler": "vite",
+  "cssPreProcessor": false,
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}
